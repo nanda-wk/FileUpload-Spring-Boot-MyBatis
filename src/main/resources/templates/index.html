@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form th:action="@{/upload}" method="post" th:object="${bean}"
+		enctype="multipart/form-data">
+
+		<input type="text" th:field="*{id}"> <input type="text"
+			th:field="*{name}"> <label>Choose file: </label> <input
+			type="file" th:field="*{img}"> <input type="submit"
+			value="Submit">
+
+	</form>
+</body>
+</html>
